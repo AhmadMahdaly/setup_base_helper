@@ -1,3 +1,5 @@
+// ignore_for_file: no_default_cases, avoid_dynamic_calls
+
 import 'package:dio/dio.dart';
 import '/../core/constants.dart';
 import '../functions/flutter_toast.dart';
