@@ -71,7 +71,7 @@ class Appthemes {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20.r),
           ),
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+          padding:  EdgeInsets.symmetric(horizontal: 20.w, vertical: 12.h),
           textStyle: AppTextStyles.style14W500,
         ),
       ),
