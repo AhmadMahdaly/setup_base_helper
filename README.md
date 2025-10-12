@@ -13,7 +13,7 @@
   - `pubspec.yaml`
 ```
 
-### ملاحظة: قائمة الملفات (عينة الأول 200 ملف إذا وُجدت)
+### ملاحظة: قائمة الملفات
 - `Helper-master/analysis_options.yaml`
 - `Helper-master/lib/core/bloc_observer.dart`
 - `Helper-master/lib/core/cache_helper/cache_helper.dart`
@@ -60,7 +60,7 @@ void main() async {
 
 ```
 
-### `lib/core/` (ملاحظة: إذا وجدت)
+### `lib/core/`
 - هذه المجلدات عادةً تحتوي:
   - `di.dart`: تسجيل الخدمات في DI container.
   - `networking/`: إعداد Dio، Interceptors، Endpoints، Failures.
@@ -79,18 +79,17 @@ void main() async {
 - **shared_preferences**: `^2.5.3`
 - **fluttertoast**: `^8.2.12`
 - **dio**: `^5.9.0`
-- **pretty_dio_logger**: `^1.4.0`
 - **go_router**: `^16.2.0`
 - **url_launcher**: `^6.3.2`
 - **flutter_bloc**: `^9.1.1`
 - **get_it**: `^8.2.0`
-- **very_good_analysis**: `^9.0.0`
 
 ### Dev Dependencies
 
 - **flutter_test**: `{'sdk': 'flutter'}`
 - **flutter_lints**: `^5.0.0`
-
+- **pretty_dio_logger**: `^1.4.0`
+- **very_good_analysis**: `^9.0.0`
 
 _لا توجد خطوط معرفة في pubspec.yaml_
 
@@ -99,15 +98,10 @@ _لا توجد خطوط معرفة في pubspec.yaml_
 ### نقاط محتملة للتحسين:
 - **إضافة اختبارات**: لا يظهر وجود مجلد `test/` في الشجرة. إنشاء اختبارات وحدة وويدجت أساسية مهم جدا.
 - **تنظيف الاعتمادات**: راجع `pubspec.yaml` واحذف الحزم غير المستخدمة لتقليل الحجم.
-- **فصل الطبقات**: تأكد وجود طبقات واضحة: data -> repository -> domain -> presentation.
-- **تحسين DI**: استخدام GetIt/Provider مع واجهات (abstract classes) لتسهيل الاختبار.
-- **دعم Null-safety**: تأكد من أن كل الملفّات تعمل بنمط Null-safety الكامل وتستخدم تهيئات required وlate بشكل صحيح.
-- **إضافة CI**: GitHub Actions لتشغيل `flutter analyze` و`flutter test` و`flutter format` تلقائيًا.
 - **التوثيق الداخلي**: إضافة تعليقات ودوال موثقة لكل ملف مركزي وخاصة network & repository.
 
-## 6. README مقترح (جاهز للنسخ واللصق)
+## 6. README
 ```markdown
-# Helper-master - Flutter Starter Template
 
 ### وصف
 قالب جاهز لبناء تطبيقات Flutter مع إعدادات سابقة تشمل Networking, Cache, DI, Routing, Theme, Shared Widgets.
@@ -156,7 +150,7 @@ flutter run
 المخطط الذي ذكرتَه مفصّل وسنترجمه إلى خطوات عملية قابلة للتنفيذ:
 
 1. **set up analysis_options.yaml**
-- افتح `analysis_options.yaml` وضبط القواعد (لints) التي تريدها. مثال: `package:lint/recommended` أو إعداد قواعد خاصة بالمشروع.
+- افتح `analysis_options.yaml` وضبط القواعد (lints) التي تريدها. مثال: `package:lint/recommended` أو إعداد قواعد خاصة بالمشروع.
 
 2. **أضف التبعيات التي ستستخدمها**
 - افتح `pubspec.yaml` وأضف الحزم المطلوبة تحت `dependencies` و`dev_dependencies`. مثال: `dio`, `get_it`, `flutter_bloc`, `equatable`, `shared_preferences`, `logger`، إلخ.
@@ -165,8 +159,8 @@ flutter run
 - Android: `android/app/build.gradle`، ضبط `applicationId`، وتحديث `signingConfigs` إذا لزم.
 - iOS: تعديل `Runner` bundle identifier في Xcode أو `ios/Runner/Info.plist`.
 
-4. **أضف الكور بمشتملاته**
-- أنشئ/راجع مجلد `lib/core/` واقتران الملفات: `di.dart`, `cache_helper`, `networking`, `routing`, `theme`, `shared_widgets`, `services`.
+4. **أضف ال core بمشتملاته**
+- راجع مجلد `lib/core/` واقتران الملفات: `di.dart`, `cache_helper`, `networking`, `routing`, `theme`, `shared_widgets`, `services`.
 
 5. **إعداد `main.dart` و `MyApp`**
 - تهيئة DI في `main()` قبل `runApp()`، ضبط BlocObserver، وربط MaterialApp/GoRouter/Theme داخل `MyApp`.
