@@ -1,9 +1,7 @@
-# توثيق كامل للمشروع `Helper-master`
-
-_توليد في: 2025-10-12 10:21 UTC_
+# توثيق كامل للمشروع `setup_base_helper`
 
 ## 1. وصف عام للمشروع والغرض منه
-يبدو أن هذا المشروع هو **قالب إعداد (Starter/Setup Template) لتطبيقات Flutter** يحتوي على بنية أساسية (core) تشمل: DI, caching, networking (Dio), theme, shared widgets, routing، وملف `my_app` كنقطة بداية. الهدف من المشروع هو أن يكون **قالبًا لإطلاق أي مشروع Flutter** بحيث يمكن إعداد الإعدادات العامة بسرعة ثم البدء ببناء المزايا الخاصة.
+هذا المشروع هو **قالب إعداد (Starter/Setup Template) لتطبيقات Flutter** يحتوي على بنية أساسية (core) تشمل: DI, caching, networking (Dio), theme, shared widgets, routing، وملف `my_app` كنقطة بداية. الهدف من المشروع هو أن يكون **قالبًا لإطلاق أي مشروع Flutter** بحيث يمكن إعداد الإعدادات العامة بسرعة ثم البدء ببناء المزايا الخاصة.
 
 **ملاحظات حول الاستخدام:** هذا القالب مناسب كـ `starter` لبدء مشروع: ستقوم أولًا بضبط `analysis_options`, إضافة التبعيات الخاصة بك، تعديل Bundle ID والـ build.gradle، ثم تعبئة مجلد core بالـ services والـ widgets المشتركة، ثم إعداد `main.dart` و `MyApp`، تنفيذ `dart fix --apply`، إضافة الخطوط، إنشاء common widgets، ثم رفع المشروع إلى GitHub بفرعين `main` و `dev`.
 
