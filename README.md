@@ -146,7 +146,7 @@ flutter run
 - إعداد GitHub Actions لـ CI/CD.
 - إضافة وثائق إضافية ومخططات UML إذا رغبت.
 
-## 8. تسلسل الخطوات (كما طلبت) مع أوامر وملاحظات مفصلة
+## 8. تسلسل الخطوات مع أوامر وملاحظات مفصلة
 المخطط الذي ذكرتَه مفصّل وسنترجمه إلى خطوات عملية قابلة للتنفيذ:
 
 1. **set up analysis_options.yaml**
@@ -194,7 +194,7 @@ dart fix --apply
 flutter run --flavor development -t lib/main.dart
 ```
 
-## 10. Checklist مفصل قبل رفع المشروع (قابل للطباعة)
+## 10. Checklist مفصل قبل رفع المشروع
 ### إعداد المشروع (قائمة 1)
 - [ ] تحديث `applicationId` / `bundleId` لكل من Android و iOS
 - [ ] ضبط `minSdkVersion` و `targetSdkVersion` إن لزم
