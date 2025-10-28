@@ -100,11 +100,8 @@ _لا توجد خطوط معرفة في pubspec.yaml_
 - **تنظيف الاعتمادات**: راجع `pubspec.yaml` واحذف الحزم غير المستخدمة لتقليل الحجم.
 - **التوثيق الداخلي**: إضافة تعليقات ودوال موثقة لكل ملف مركزي وخاصة network & repository.
 
-## 6. README
-```markdown
+## 6. Steps
 
-### وصف
-قالب جاهز لبناء تطبيقات Flutter مع إعدادات سابقة تشمل Networking, Cache, DI, Routing, Theme, Shared Widgets.
 
 ### المتطلبات
 - Flutter SDK (>= 3.x)
@@ -130,8 +127,7 @@ flutter run
 - `flutter pub get`
 - `flutter pub run build_runner build --delete-conflicting-outputs`
 - `dart fix --apply`
-```
-```
+
 
 ## 7. قائمة TODO عامة مرتبة بالأولوية
 ### عالية
