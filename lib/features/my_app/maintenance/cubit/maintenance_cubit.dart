@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '/../core/networking/end_points.dart';
 
 part 'maintenance_state.dart';
@@ -12,7 +13,7 @@ class MaintenanceCubit extends Cubit<MaintenanceState> {
     emit(MaintenanceLoading());
     try {
       await dio.get<dynamic>(
-        EndPoints.getProfile,
+        EndPoints.getAuthUser,
         options: Options(
           responseType: ResponseType.plain,
           extra: {'skipErrorInterceptor': true},

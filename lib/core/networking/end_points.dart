@@ -1,9 +1,13 @@
 class EndPoints {
   static const String baseUrl = 'https://absabsabs-eg.com/api/';
-  /// <- auth ->
-  static const String login = 'user/login';
-  static const String updateProfile = 'user/update';
-  static const String getProfile = 'profile';
-  static const String deleteAccount = 'user/delete';
+  // ? auth & user
+  static const String login = 'login';
+  static const String register = 'register';
+  static const String sendOtp = 'send-otp';
+  static const String verifyOtp = 'verify-otp';
+  static const String updatePassword = 'update-password';
+  static const String resetPassword = 'update-profile';
+  static const String getAuthUser = 'get-auth-user';
+  static const String updateProfile = 'update-profile';
   static const String logout = 'logout';
 }

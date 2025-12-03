@@ -16,7 +16,7 @@ class SkipButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.pushReplacementNamed(AppRoutes.mainlayoutScreen);
+        context.pushReplacementNamed(AppRoutes.loginScreen);
         CacheHelper.set(CacheKeys.isFirstOpen, true);
       },
       child: Padding(

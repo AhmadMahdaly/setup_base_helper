@@ -4,6 +4,12 @@ import 'package:go_router/go_router.dart';
 import '../../core/constants.dart';
 import '../../core/di.dart';
 import '../../core/routing/app_routes.dart';
+import '../../features/auth/presentation/controllers/bloc/auth_bloc.dart';
+import '../../features/auth/presentation/views/forget_password_screen.dart';
+import '../../features/auth/presentation/views/login_screen.dart';
+import '../../features/auth/presentation/views/register_screen.dart';
+import '../../features/auth/presentation/views/reset_password_screen.dart';
+import '../../features/auth/presentation/views/verification_screen.dart';
 import '../../features/intro/onboarding/cubit/onboarding_cubit.dart';
 import '../../features/intro/onboarding/onboarding_screen.dart';
 import '../../features/intro/splash/splash_view.dart';
@@ -15,6 +21,7 @@ class RouterGenerationConfig {
     navigatorKey: navigatorKey,
     initialLocation: AppRoutes.splashScreen,
     routes: [
+      /// ------------------ < Intro Routes > ------------------
       GoRoute(
         path: AppRoutes.splashScreen,
         name: AppRoutes.splashScreen,
@@ -29,13 +36,64 @@ class RouterGenerationConfig {
         ),
       ),
 
+      /// ------------------ < Main Layout Route > ------------------
       GoRoute(
-        path: AppRoutes.mainlayoutScreen,
-        name: AppRoutes.mainlayoutScreen,
+        path: AppRoutes.mainLayoutScreen,
+        name: AppRoutes.mainLayoutScreen,
         builder: (context, state) => BlocProvider<MainLayoutCubit>(
           create: (context) => getIt<MainLayoutCubit>(),
           child: const MainLayoutView(),
         ),
+      ),
+
+      /// ------------------ < Auth Routes > ------------------
+      GoRoute(
+        path: AppRoutes.loginScreen,
+        name: AppRoutes.loginScreen,
+        builder: (context, state) => BlocProvider<AuthBloc>.value(
+          value: getIt<AuthBloc>(),
+          child: const LogInScreen(),
+        ),
+      ),
+      GoRoute(
+        path: AppRoutes.registerScreen,
+        name: AppRoutes.registerScreen,
+        builder: (context, state) => BlocProvider<AuthBloc>.value(
+          value: getIt<AuthBloc>(),
+          child: const RegisterScreen(),
+        ),
+      ),
+      GoRoute(
+        path: AppRoutes.forgotPasswordScreen,
+        name: AppRoutes.forgotPasswordScreen,
+        builder: (context, state) => BlocProvider<AuthBloc>.value(
+          value: getIt<AuthBloc>(),
+          child: const ForgotPasswordScreen(),
+        ),
+      ),
+      GoRoute(
+        path: AppRoutes.resetPasswordScreen,
+        name: AppRoutes.resetPasswordScreen,
+        builder: (context, state) {
+          final email = state.extra! as String;
+
+          return BlocProvider<AuthBloc>.value(
+            value: getIt<AuthBloc>(),
+            child: ResetPasswordScreen(email: email),
+          );
+        },
+      ),
+      GoRoute(
+        path: AppRoutes.verificationScreen,
+        name: AppRoutes.verificationScreen,
+        builder: (context, state) {
+          final email = state.extra! as String;
+
+          return BlocProvider<AuthBloc>.value(
+            value: getIt<AuthBloc>(),
+            child: VerificationScreen(email: email),
+          );
+        },
       ),
 
       /// ------------- < >  -------------

@@ -24,7 +24,7 @@ class MaintenanceScreen extends StatelessWidget {
               context.pop();
             } else {
               context.goNamed(
-                AppRoutes.mainlayoutScreen,
+                AppRoutes.mainLayoutScreen,
               );
             }
           }

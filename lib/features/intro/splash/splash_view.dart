@@ -33,7 +33,7 @@ class _SplashViewState extends State<SplashView> {
     if (hasSeenOnboarding == null) {
       context.go(AppRoutes.onBoardingScreen);
     } else {
-      context.go(AppRoutes.mainlayoutScreen);
+      context.go(AppRoutes.loginScreen);
     }
   }
 

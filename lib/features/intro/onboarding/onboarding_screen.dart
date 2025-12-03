@@ -151,7 +151,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                 true,
                               );
                               context.pushReplacementNamed(
-                                AppRoutes.mainlayoutScreen,
+                                AppRoutes.loginScreen,
                               );
                             } else {
                               _pageController.nextPage(
