@@ -96,6 +96,102 @@ abstract class S {
     Locale('ar'),
     Locale('en'),
   ];
+
+  /// No description provided for @loading.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading...'**
+  String get loading;
+
+  /// No description provided for @lang.
+  ///
+  /// In en, this message translates to:
+  /// **'ع'**
+  String get lang;
+
+  /// No description provided for @skip.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip'**
+  String get skip;
+
+  /// No description provided for @next.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get next;
+
+  /// No description provided for @onboard1Title.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome to Our App'**
+  String get onboard1Title;
+
+  /// No description provided for @onboard1Desc.
+  ///
+  /// In en, this message translates to:
+  /// **'Discover our amazing features and ease of use.'**
+  String get onboard1Desc;
+
+  /// No description provided for @onboard2Title.
+  ///
+  /// In en, this message translates to:
+  /// **'Stay Connected'**
+  String get onboard2Title;
+
+  /// No description provided for @onboard2Desc.
+  ///
+  /// In en, this message translates to:
+  /// **'Easily connect with your friends and family.'**
+  String get onboard2Desc;
+
+  /// No description provided for @onboard3Title.
+  ///
+  /// In en, this message translates to:
+  /// **'Get Started Now'**
+  String get onboard3Title;
+
+  /// No description provided for @onboard3Desc.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign up and start your journey with us today!'**
+  String get onboard3Desc;
+
+  /// No description provided for @home.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get home;
+
+  /// No description provided for @search.
+  ///
+  /// In en, this message translates to:
+  /// **'Search'**
+  String get search;
+
+  /// No description provided for @notifications.
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get notifications;
+
+  /// No description provided for @profile.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get profile;
+
+  /// No description provided for @services.
+  ///
+  /// In en, this message translates to:
+  /// **'Services'**
+  String get services;
+
+  /// No description provided for @support.
+  ///
+  /// In en, this message translates to:
+  /// **'Support'**
+  String get support;
 }
 
 class _SDelegate extends LocalizationsDelegate<S> {
