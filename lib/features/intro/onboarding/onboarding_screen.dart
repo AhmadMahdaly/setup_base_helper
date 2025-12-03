@@ -40,31 +40,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       builder: (context, state) {
         final onboardingCubit = context.read<OnboardingCubit>();
         return Scaffold(
-          backgroundColor: AppColors.primaryColor,
           body: SafeArea(
             bottom: false,
             child: Stack(
               fit: StackFit.expand,
               children: [
-                Positioned(
-                  bottom: 0,
-                  right: 0,
-                  left: 0,
-                  child: Container(
-                    height: SizeConfig.screenHeight / 2.3,
-                    decoration: BoxDecoration(
-                      color: AppColors.primaryColor,
-                      borderRadius: BorderRadius.only(
-                        bottomRight: CacheHelper.getLanguage() == 'en'
-                            ? Radius.circular(100.r)
-                            : Radius.zero,
-                        bottomLeft: CacheHelper.getLanguage() == 'ar'
-                            ? Radius.circular(100.r)
-                            : Radius.zero,
-                      ),
-                    ),
-                  ),
-                ),
                 PageView.builder(
                   controller: _pageController,
                   itemCount: 3,
@@ -82,32 +62,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         // Image
                         Positioned(
                           bottom: SizeConfig.screenHeight / 2.4,
-                          right: 0,
-                          left: 0,
+                          right: 20.w,
+                          left: 20.w,
                           child: Image.asset(
                             // height: 340.h,
                             images[index],
                             fit: BoxFit.contain,
                             width: double.infinity,
-                          ),
-                        ),
-                        Positioned(
-                          bottom: 0,
-                          right: 0,
-                          left: 0,
-                          child: Container(
-                            height: SizeConfig.screenHeight / 2.3,
-                            decoration: BoxDecoration(
-                              color: AppColors.scaffoldBackgroundLightColor,
-                              borderRadius: BorderRadius.only(
-                                topLeft: CacheHelper.getLanguage() == 'en'
-                                    ? Radius.circular(100.r)
-                                    : Radius.zero,
-                                topRight: CacheHelper.getLanguage() == 'ar'
-                                    ? Radius.circular(100.r)
-                                    : Radius.zero,
-                              ),
-                            ),
+                            filterQuality: FilterQuality.high,
                           ),
                         ),
                       ],
@@ -159,11 +121,20 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         20.verticalSpace,
-                        const OnBoardingText(),
+                        const IgnorePointer(
+                          child: OnBoardingText(),
+                        ),
                         50.verticalSpace,
                         SizedBox(
                           height: 15.h,
                           child: CustomJourneyDot(
+                            onDotClicked: (int index) {
+                              _pageController.animateToPage(
+                                index,
+                                duration: const Duration(milliseconds: 500),
+                                curve: Curves.easeInOut,
+                              );
+                            },
                             activeIndex: onboardingCubit.onBoardingIndex,
                             count: 3,
                           ),

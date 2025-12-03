@@ -3,6 +3,8 @@ import 'package:go_router/go_router.dart';
 
 import '/../core/cache_helper/cache_helper.dart';
 import '/../core/cache_helper/cache_values.dart';
+import '/../core/resources/assets/app_images.dart';
+import '/../core/responsive/responsive_config.dart';
 import '/../core/routing/app_routes.dart';
 
 class SplashView extends StatefulWidget {
@@ -37,18 +39,17 @@ class _SplashViewState extends State<SplashView> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // Center(
-          //   child: Image.asset(
-          //     AppImages.appLogo,
-          //     fit: BoxFit.cover,
-          //     height: 190.h,
-          //     width: 190.w,
-          //   ),
-          // ),
+          Center(
+            child: Image.asset(
+              AppImages.appLogo,
+              fit: BoxFit.cover,
+              width: SizeConfig.screenWidth * 0.8,
+            ),
+          ),
         ],
       ),
     );
