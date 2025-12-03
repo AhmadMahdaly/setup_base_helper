@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../core/responsive/responsive_config.dart';
 import './cache_helper/cache_helper.dart';
 
-int mainLayoutIntitalScreenIndex = 0;
-String? userToken;
 final navigatorKey = GlobalKey<NavigatorState>();
-const kPrimaryEnFont = 'app_font';
-const kPrimaryArFont = 'app_font';
+
+final double radius = 30.r;
+const kPrimaryEnFont = 'Cairo';
+const kPrimaryArFont = 'Cairo';
 final bool latinLang = (CacheHelper.getLanguage() == 'en');

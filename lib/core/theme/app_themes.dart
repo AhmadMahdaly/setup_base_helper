@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '/../core/constants.dart';
+import '../constants.dart';
 import '../responsive/responsive_config.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_text_style.dart';
@@ -25,6 +25,7 @@ class Appthemes {
         toolbarHeight: 100.h,
         titleTextStyle: AppTextStyle.style18Bold.copyWith(
           color: AppColors.scaffoldBackgroundLightColor,
+          fontFamily: latinLang ? kPrimaryEnFont : kPrimaryArFont,
         ),
         backgroundColor: AppColors.primaryColor,
         surfaceTintColor: AppColors.scaffoldBackgroundLightColor,
@@ -47,7 +48,9 @@ class Appthemes {
           borderRadius: BorderRadius.circular(20.r),
         ),
         elevation: 5,
-        titleTextStyle: AppTextStyle.style20Bold,
+        titleTextStyle: AppTextStyle.style20Bold.copyWith(
+          fontFamily: latinLang ? kPrimaryEnFont : kPrimaryArFont,
+        ),
       ),
 
       /// ستايل الزر الرئيسي (ElevatedButton)
@@ -60,7 +63,9 @@ class Appthemes {
             borderRadius: BorderRadius.circular(20.r),
           ),
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 12.h),
-          textStyle: AppTextStyle.style12W500,
+          textStyle: AppTextStyle.style12W500.copyWith(
+            fontFamily: latinLang ? kPrimaryEnFont : kPrimaryArFont,
+          ),
         ),
       ),
 
@@ -72,7 +77,9 @@ class Appthemes {
             borderRadius: BorderRadius.circular(20.r),
           ),
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 12.h),
-          textStyle: AppTextStyle.style14W500,
+          textStyle: AppTextStyle.style14W500.copyWith(
+            fontFamily: latinLang ? kPrimaryEnFont : kPrimaryArFont,
+          ),
         ),
       ),
     );

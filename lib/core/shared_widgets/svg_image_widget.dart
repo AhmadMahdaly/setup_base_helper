@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../responsive/responsive_config.dart';
+
 class SvgImage extends StatelessWidget {
   const SvgImage({
     required this.imagePath,
@@ -33,31 +35,32 @@ class SvgImage extends StatelessWidget {
     if (isNetwork) {
       return SvgPicture.network(
         imagePath,
-        height: height,
-        width: width,
+        height: height?.h ?? 24.h,
+        width: width?.w ?? 24.w,
         fit: boxFit,
         colorFilter: colorFilter,
         placeholderBuilder: (context) =>
             placeholder ??
             Center(
               child: SizedBox(
-                width: height ?? 24,
-                height: height ?? 24,
+                width: width?.w ?? 24.w,
+                height: height?.h ?? 24.h,
                 child: const CircularProgressIndicator(strokeWidth: 2),
               ),
             ),
         errorBuilder: (context, error, stackTrace) =>
             errorWidget ??
-            const Icon(
+            Icon(
               Icons.error_outline,
               color: Colors.redAccent,
+              size: height?.r ?? 24.r,
             ),
       );
     } else {
       return SvgPicture.asset(
         imagePath,
-        height: height,
-        width: width,
+        height: height?.h ?? 24.h,
+        width: width?.w ?? 24.w,
         fit: boxFit,
         colorFilter: colorFilter,
       );

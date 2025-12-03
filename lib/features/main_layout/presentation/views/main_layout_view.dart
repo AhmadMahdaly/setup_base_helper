@@ -78,14 +78,14 @@ class _MainLayoutViewState extends State<MainLayoutView> {
                   ),
                 ),
                 centerTitle: true,
-                title: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16.w),
-                  child: Image.asset(
-                    AppImages.appLogoWhithoutBg,
-                    width: 50.w,
-                    fit: BoxFit.fitWidth,
-                  ),
-                ),
+                // title: Padding(
+                //   padding: EdgeInsets.symmetric(horizontal: 16.w),
+                //   child: Image.asset(
+                //     AppImages.appLogoWhithoutBg,
+                //     width: 50.w,
+                //     fit: BoxFit.fitWidth,
+                //   ),
+                // ),
               ),
               body: PageView(
                 controller: _pageController,

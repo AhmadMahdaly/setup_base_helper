@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../constants.dart';
 import '../responsive/responsive_config.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_text_style.dart';
@@ -24,7 +25,7 @@ class CustomPrimaryButton extends StatelessWidget {
           tapTargetSize: MaterialTapTargetSize.shrinkWrap,
           minimumSize: WidgetStateProperty.all(Size(width ?? 300.w, 52.h)),
           shape: WidgetStateProperty.all(
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.r)),
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(radius)),
           ),
         ),
         child: Text(
