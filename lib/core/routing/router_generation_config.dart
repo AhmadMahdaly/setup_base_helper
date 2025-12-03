@@ -1,9 +1,10 @@
 // import 'package:flutter_bloc/flutter_bloc.dart';
 // import 'package:.../core/di.dart';
 import 'package:go_router/go_router.dart';
+
 import '/../core/constants.dart';
 import '/../core/routing/app_routes.dart';
-// import '../views/splash_view.dart';
+import '/../features/intro/splash/splash_view.dart';
 
 class RouterGenerationConfig {
   static GoRouter goRouter = GoRouter(
@@ -13,7 +14,7 @@ class RouterGenerationConfig {
       GoRoute(
         path: AppRoutes.splashScreen,
         name: AppRoutes.splashScreen,
-        // builder: (context, state) => const SplashView(),
+        builder: (context, state) => const SplashView(),
       ),
 
       /// ------------- < >  -------------
