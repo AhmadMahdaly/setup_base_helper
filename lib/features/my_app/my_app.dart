@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:m/core/routing/router_generation_config.dart';
-import 'package:m/core/theme/app_themes.dart';
+
 import '/../core/di.dart';
 import '/../core/localization/s.dart';
 import '/../core/responsive/responsive_config.dart';
+import '/../core/routing/router_generation_config.dart';
+import '/../core/theme/app_themes.dart';
 import '../my_app/controller/localization_cubit/localization_cubit.dart';
 
 class MyApp extends StatelessWidget {
@@ -18,7 +19,6 @@ class MyApp extends StatelessWidget {
         BlocProvider<LocalizationCubit>(
           create: (context) => getIt<LocalizationCubit>(),
         ),
-      
       ],
       child: BlocBuilder<LocalizationCubit, LocalizationState>(
         builder: (context, localeState) {
